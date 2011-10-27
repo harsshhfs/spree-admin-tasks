@@ -1,4 +1,3 @@
-require 'spree_admin_tasks_hooks'
 
 module SpreeAdminTasks
   class Engine < Rails::Engine
@@ -9,6 +8,7 @@ module SpreeAdminTasks
       Dir.glob(File.join(File.dirname(__FILE__), "../app/**/*_decorator.rb")) do |c|
         Rails.env.production? ? require(c) : load(c)
       end
+      require 'spree_admin_tasks_hooks'
     end
 
     config.to_prepare &method(:activate).to_proc
