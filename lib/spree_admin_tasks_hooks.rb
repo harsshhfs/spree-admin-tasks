@@ -18,7 +18,7 @@ Deface::Override.new(:virtual_path => "layouts/admin",
                      #icons
 Deface::Override.new(:virtual_path => "admin/orders/index",
                      :name => "Little icin on order list",
-                     :insert_after => "[data-hook='admin_orders_index_row_actions'], #admin_orders_index_row_actions[data-hook]",
+                     :insert_top => "[data-hook='admin_orders_index_row_actions'], #admin_orders_index_row_actions[data-hook]",
                      :partial => "admin/admin_tasks/order_icon_link",
                      :disabled => false)
 

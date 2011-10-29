@@ -9,7 +9,7 @@
   <%= f.field_container :due_at do %>
     <%= f.label :due_at, t("due_at") %><br />
     <%= f.error_message_on :due_at %>
-    <%= f.spree_date_picker :due_at %>
+    <%= f.text_field :due_at ,:class => 'datepicker' %>
     <% end %>
 
   <%= f.field_container :done do %>
