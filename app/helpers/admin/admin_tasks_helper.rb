@@ -22,7 +22,7 @@ module Admin::AdminTasksHelper
   
   def self.find_task(object)
     return unless object
-    task = AdminTask.find_by_source_id(object.id)
+    task = AdminTask.find_by_source_id_and_source_type(object.id, object.class )
   end
   
 end
