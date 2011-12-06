@@ -1,8 +1,8 @@
 Admin::ReportsController.class_eval do
 
-  before_filter :kludge 
+  before_filter :kludge_open 
   
-  def kludge
+  def kludge_open
     return if Admin::ReportsController::AVAILABLE_REPORTS.has_key?(:open_orders)
     Admin::ReportsController::AVAILABLE_REPORTS.merge!({ :open_orders => {:name => "Maksamatta", :description => "Maksamattomat tilaukset"}  })
   end
