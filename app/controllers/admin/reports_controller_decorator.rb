@@ -54,11 +54,11 @@ Order.class_eval do
     val
   end
   def alv13
-    a13 = adjustments.detect { |a| a.label == "Alv 13"}.amount  
+    a13 = adjustments.detect { |a| a.label.index "13"}.amount  
     kom((a13 * 1.13 ) / 0.13) 
   end
   def alv23
-    a23 = adjustments.detect { |a| a.label == "Alv 23"}.amount  
+    a23 = adjustments.detect { |a| a.label.index "23"}.amount  
     kom( (a23 * 1.23 ) / 0.23 )
   end
 end
