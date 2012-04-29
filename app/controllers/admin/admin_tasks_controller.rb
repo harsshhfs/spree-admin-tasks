@@ -18,7 +18,7 @@ class Admin::AdminTasksController < Admin::BaseController
   private
   def load
     @admins = Role.find_by_name("admin").users
-    search = AdminTask.order("due_at DESC")
+    search = AdminTask.order("due_at")
     if params[:all]
       @tasks = search.all
     else

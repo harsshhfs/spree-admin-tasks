@@ -33,7 +33,7 @@
         <%- locals = {:admin_task => admin_task} %>
         <%= hook :admin_tasks_index_rows, locals do %>
           <td><%= admin_task.task %></td>
-          <td><%= source_link admin_task %></td>
+          <td><%== source_link admin_task %></td>
           <td><%= admin_task.user.email if admin_task.user %></td>
           <td><%= I18n.l admin_task.due_at.to_date %></td>
           <td><%= done_link admin_task %></td>
