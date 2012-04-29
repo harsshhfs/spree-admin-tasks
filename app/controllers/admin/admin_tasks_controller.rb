@@ -18,10 +18,11 @@ class Admin::AdminTasksController < Admin::BaseController
   private
   def load
     @admins = Role.find_by_name("admin").users
+    search = AdminTask.order("due_at DESC")
     if params[:all]
-      @tasks = AdminTask.all
+      @tasks = search.all
     else
-      @tasks = AdminTask.find_all_by_user_id(current_user.id)
+      @tasks = search.find_all_by_user_id(current_user.id)
     end
   end
 end
