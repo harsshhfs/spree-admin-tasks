@@ -6,7 +6,7 @@ module Admin::AdminTasksHelper
     when "Product"
       link_to task.source.name , edit_admin_product_url(task.source)
     when "Order"
-      link_to( "#{task.source.number}&nbsp;(#{task.source.total})" , admin_order_url(task.source)) 
+      link_to( "#{task.source.number} (#{task.source.total})" , admin_order_url(task.source)) 
     else
       task.source_id ?  task.source.to_s : ""
     end
