@@ -18,7 +18,7 @@ Add to your Gemfile with
 
 and run bundler.
 
-There is a migration, so you will have to move it with 
+There migrations, so you will have to move it with 
   
   rake spree_admin_tasks:install 
   
@@ -26,6 +26,9 @@ before rails3 and then run it with
 
   rake db:migrate
 
+Upgrade and Versions
+====================
 
+This is now spree 1.1 compatible. Maybe it works for 1.0 , don't know. There is a 0.7 ref in the version file.
 
 Copyright (c) 2011 [Torsten Rüger], released under the New BSD License

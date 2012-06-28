@@ -1,11 +1,11 @@
-module Admin::AdminTasksHelper
+module Spree::Admin::AdminTasksHelper
 
   def source_link task
     return " " unless task.source_id
     case task.source_type 
-    when "Product"
+    when "Spree::Product"
       link_to task.source.name , edit_admin_product_url(task.source)
-    when "Order"
+    when "Spree::Order"
       link_to( "#{task.source.number} (#{task.source.total})" , admin_order_url(task.source)) 
     else
       task.source_id ?  task.source.to_s : ""
@@ -22,7 +22,7 @@ module Admin::AdminTasksHelper
   
   def self.find_task(object)
     return unless object
-    task = AdminTask.find_by_source_id_and_source_type(object.id, object.class )
+    task = Spree::AdminTask.find_by_source_id_and_source_type(object.id, object.class )
   end
   
 end

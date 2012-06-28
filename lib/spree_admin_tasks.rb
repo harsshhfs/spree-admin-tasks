@@ -1,16 +1,2 @@
-
-module SpreeAdminTasks
-  class Engine < Rails::Engine
-
-    config.autoload_paths += %W(#{config.root}/lib)
-
-    def self.activate
-      Dir.glob(File.join(File.dirname(__FILE__), "../app/**/*_decorator.rb")) do |c|
-        Rails.env.production? ? require(c) : load(c)
-      end
-      require 'spree_admin_tasks_hooks'
-    end
-
-    config.to_prepare &method(:activate).to_proc
-  end
-end
+require 'spree/core'
+require 'spree_admin_tasks/engine'

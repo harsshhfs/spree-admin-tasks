@@ -1,0 +1,14 @@
+<div class="admin_task_new_form_header">
+  <h1><%= t("new_task") %></h1>
+
+  <%= render 'spree/shared/error_messages', :target => @admin_task %>
+
+  <%= form_for(:admin_task, :url => admin_admin_tasks_url) do |form| %>
+    <%= render :partial => "form", :locals => { :form => form } %>
+
+    <p class="form-buttons" data-hook="buttons">
+      <%= button t('actions.create') %>
+      <%= t(:or) %> <%= link_to t('actions.cancel'), admin_admin_tasks_url %>
+    </p>
+  <% end %>
+</div>

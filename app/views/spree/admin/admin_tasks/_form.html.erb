@@ -1,0 +1,28 @@
+<div class="admin_task_form_fields">
+    <%= form.label :task, t("task")  %><br />
+    <%= form.text_field :task , :size => 100  %>
+    <%= error_message_on :admin_task, :task %>
+    <br/>
+    <%= form.label :due_at, t("due_at") %><br />
+    <%= form.error_message_on :due_at %>
+    <%= form.text_field :due_at ,:class => 'datepicker' %>
+    <br/>
+
+    <%= form.label :done, t("done")%><br />
+    <%=form.check_box :done %>
+    <br/>
+
+    <%= form.label :user_id, t("admin") %><br />
+    <%= form.collection_select(:user_id, @admins, :id, :email, {}, {"style" => "width:200px"})  %>
+    <%= error_message_on :admin_task, :user_id %>
+    <br/>
+  
+  <% @task.source_id = params[:source_id] if params[:source_id] %>
+  <% @task.source_type = params[:source_type] if params[:source_type] %>
+  <%= form.hidden_field :source_type  %>
+  <%= form.hidden_field :source_id  %>
+  
+  <p><%== "#{I18n.t('source')}: #{source_link(@task)}" if @task.source_id %></p>
+</div>
+
+

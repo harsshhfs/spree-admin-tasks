@@ -1,0 +1,5 @@
+<div style='text-align:right;width:200px;float:right'>
+<%= link_to_unless( Spree::Admin::AdminTasksHelper.find_task(@order) ,  t('new_task') , new_admin_admin_task_path(:source_type => "Order" , :source_id => @order.id.to_s ) ) do %>
+  <%= render :partial =>  'spree/admin/admin_tasks/order_icon_link' %>
+<% end %>
+</div>

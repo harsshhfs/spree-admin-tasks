@@ -2,6 +2,7 @@ en:
   admin_tasks: Tasks
   new_task: New Task
   task_updated: The Task has been updated
+  task_deleted: The task was deleted
   task: Task
   due_at: Due by
   done: Done
