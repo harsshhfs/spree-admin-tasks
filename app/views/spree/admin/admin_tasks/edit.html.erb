@@ -3,11 +3,11 @@
   <%= render "spree/shared/error_messages", :target => @task %>
 </div>
 <div class="admin_task_edit_form">
-  <%= form_for(@task , :url => admin_admin_tasks_url , :html => { :method => :put }) do |form| %>
+  <%= form_for(@task , :url => admin_admin_task_url , :html => { :method => :put }) do |form| %>
     <%= render :partial => "form", :locals => { :form => form , :task => @task } %>
 
     <p class="form-buttons" data-hook="buttons">
-      <%= button t('actions.create') %>
+      <%= button t('actions.update') %>
       <%= t(:or) %> <%= link_to t('actions.cancel'), admin_admin_tasks_url %>
     </p>
   <% end %>

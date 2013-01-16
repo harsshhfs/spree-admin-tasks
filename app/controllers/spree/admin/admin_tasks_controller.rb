@@ -11,6 +11,12 @@ module Spree
     @task.save!
     redirect_to :action => :index
   end
+  def update
+    @task = AdminTask.find(params[:id])
+    @task.update_attributes(params[:admin_task])
+    @task.save!
+    redirect_to :action => :index
+  end
   def edit
     @task = AdminTask.find(params[:id])
   end
