@@ -1,9 +1,13 @@
+Update
+-------
+removed polymorphic functionality. only orders supported
+
 SpreeAdminTasks
 ===============
 
 AdminTasks are little reminders for oneself, or other team members to "do something".
 
-They have a date, a done? state and the task (text). Also an object may be attached, and Orders and Products are supported. If you want others, you'll need to create the appropriate links yourself.
+They have a date, a done? state and the task (text). Also an order may be attached. 
 
 A Task is assigned to an admin user.
 
@@ -29,6 +33,6 @@ before rails3 and then run it with
 Upgrade and Versions
 ====================
 
-This is now spree 1.1 compatible. Maybe it works for 1.0 , don't know. There is a 0.7 ref in the version file.
+This is now spree 1.2 compatible. 
 
 Copyright (c) 2011 [Torsten Rüger], released under the New BSD License

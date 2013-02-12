@@ -17,7 +17,7 @@
     <tr>
     <div class="admin_tasks_index_headers">
       <th><%= t("task") %></th>
-      <th><%= t("source") %></th>
+      <th><%= t("order") %></th>
       <th><%= t("assigned_to") %></th>
       <th><%= t("due_at") %></th>
       <th><%= t("done") %></th>
@@ -31,7 +31,7 @@
         <%- locals = {:admin_task => admin_task} %>
         <div class="admin_tasks_index_rows">
           <td><%= admin_task.task %></td>
-          <td><%== source_link admin_task %></td>
+          <td><%== order_link admin_task %></td>
           <td><%= admin_task.user.email if admin_task.user %></td>
           <td><%= I18n.l admin_task.due_at.to_date %></td>
           <td><%= done_link admin_task %></td>

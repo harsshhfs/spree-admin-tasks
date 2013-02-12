@@ -9,7 +9,7 @@ fi:
   editing_admin_task: Tehtävän muokkaus
   all_tasks: Kaikki tehtävät
   my_tasks: Minun tehtävät
-  source: Tilaus (tai..)
+  order: Tilaus
   assigned_to: Tehtävän tekee
   to_do: tehtävä
   done: tehty
