@@ -53,15 +53,15 @@ Spree::Order.class_eval do
     val.sub! "." , ","
     val
   end
-  def alv13
-    a13 = adjustments.detect { |a| a.label.index "13"}
-    return 0.0 unless a13
-    kom((a13.amount * 1.13 ) / 0.13) 
+  def alv14
+    a14 = adjustments.detect { |a| a.label.index "14"}
+    return 0.0 unless a14
+    kom((a14.amount * 1.14 ) / 0.14) 
   end
-  def alv23
-    a23 = adjustments.detect { |a| a.label.index "23"}  
-    return 0.0 unless a23
-    kom( (a23.amount * 1.23 ) / 0.23 )
+  def alv24
+    a24 = adjustments.detect { |a| a.label.index "24"}  
+    return 0.0 unless a24
+    kom( (a24.amount * 1.24 ) / 0.24 )
   end
 end
 
